@@ -18,18 +18,16 @@ function PrimeNumbers (string){
 // (2) loop through the string
 // (3) check if last number and the previous equal the current
 let array = [1, 1, 2];
-
-function Fibonacci (array){
-    
+function Fibonacci (array){   
 for (let i=2; i<100; i++){
     let cur = array[i];
+    let oneAfter = array[i+1];
+    let twoAfter = array[i+2];
     let oneBefore = array[i-1];
-    let twoBefore = array[i-2];
-    if (cur = oneBefore + twoBefore && i<=100){
-        array.push(array[i]);
-    }
-     
-    }
-    console.log(array);};
+    do {array.push(cur + oneBefore);}
+    while (twoAfter = oneAfter + cur)
+    };
+    console.log(array);
+};
 
 Fibonacci(array);
