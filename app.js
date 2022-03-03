@@ -17,17 +17,43 @@ function PrimeNumbers (string){
 // (1) Ill need a function that takes in a string
 // (2) loop through the string
 // (3) check if last number and the previous equal the current
-let array = [1, 1, 2];
-function Fibonacci (array){   
-for (let i=2; i<100; i++){
-    let cur = array[i];
-    let oneAfter = array[i+1];
-    let twoAfter = array[i+2];
-    let oneBefore = array[i-1];
-    do {array.push(cur + oneBefore);}
-    while (twoAfter = oneAfter + cur)
-    };
-    console.log(array);
+/*let userChoice = prompt('Please enter your starting number');
+let userArray = [];
+function UserChoiceToArray (userChoice){
+    parseInt(userArray.push(userChoice));
+    parseInt(userArray.push(userChoice));
+    parseInt(userArray.push(userChoice + userChoice));
 };
 
-Fibonacci(array);
+
+*/
+let userChoice;
+let userArray;
+let cur;
+let oneAfter;
+let twoAfter;
+let oneBefore;
+
+function UserChoiceToArray (userChoice){
+    userChoice = prompt('Please enter your starting number');
+    userArray = [];
+    userArray.push(parseInt(userChoice));
+    userArray.push(parseInt(userChoice));
+    userArray.push(parseInt(userChoice) + parseInt(userChoice));
+    
+};
+function Fibonacci (){ 
+    UserChoiceToArray(userChoice);
+for (let i=2; i<100; i++){
+    cur = userArray[i];
+    oneAfter = userArray[i+1];
+    twoAfter = userArray[i+2];
+    oneBefore = userArray[i-1];
+    do {userArray.push(cur + oneBefore);}
+    while (twoAfter = oneAfter + cur)
+    };
+    console.log(userArray);
+};
+
+
+Fibonacci();
